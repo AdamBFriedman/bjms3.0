@@ -9,10 +9,10 @@ import Link from "@material-ui/core/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@material-ui/core/Container";
 import Avatar from "@material-ui/core/Avatar";
-import Button from "@material-ui/core/Button";
 import Tooltip from "@material-ui/core/Tooltip";
 import MenuItem from "@material-ui/core/MenuItem";
 import Logo from "../../Images/logo_face.png";
+import "./navbar.css";
 
 const pages = ["Wedding", "About", "Contact"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -40,14 +40,9 @@ const ResponsiveAppBar = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            // noWrap
-            component="div"
-            // sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-          >
-            {Logo}
-          </Typography>
+          <Box>
+            <img className="logoImage" src={Logo} alt="Logo" />
+          </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -97,33 +92,73 @@ const ResponsiveAppBar = () => {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              justifyContent: "space-between",
+            }}
+          >
             <Link
               // onClick={handleCloseNavMenu}
-              className="nav-link active"
-              href={"#wedding"}
+              className="nav-link nav active"
+              href={"#home"}
             >
-              Wedding
+              Home
             </Link>
+
             <Link
               // onClick={handleCloseNavMenu}
-              className="nav-link active"
-              href={"#about"}
+              className="nav-link nav"
+              href={"#story"}
             >
-              About
+              Story
             </Link>
+
             <Link
               // onClick={handleCloseNavMenu}
-              className="nav-link active"
-              href={"#contact"}
+              className="nav-link nav"
+              href={"#private"}
             >
-              Contact
+              Private Parties
+            </Link>
+
+            <Link
+              // onClick={handleCloseNavMenu}
+              className="nav-link nav"
+              href={"#school"}
+            >
+              Schools/Camps
+            </Link>
+
+            <Link
+              // onClick={handleCloseNavMenu}
+              className="nav-link nav"
+              href={"#corporate"}
+            >
+              Corporate
+            </Link>
+
+            <Link
+              // onClick={handleCloseNavMenu}
+              className="nav-link nav"
+              href={"#virtual"}
+            >
+              Virtual Magic
+            </Link>
+
+            <Link
+              // onClick={handleCloseNavMenu}
+              className="nav-link nav"
+              href={"#faq"}
+            >
+              FAQ
             </Link>
             {/* {pages.map((page) => (
               <Link
                 key={page}
                 // onClick={handleCloseNavMenu}
-                className="nav-link active"
+                className="nav-link nav"
                 href={"#contact"}
               >
                 {page}
@@ -251,7 +286,7 @@ export default ResponsiveAppBar;
 //             >
 //               <ul className="navbar-nav">
 //                 <li>
-//                   <a className="nav-link active" href="#home">
+//                   <a className="nav-link nav" href="#home">
 //                     Home
 //                   </a>
 //                 </li>
