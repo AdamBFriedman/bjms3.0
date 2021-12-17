@@ -40,10 +40,6 @@ const ResponsiveAppBar = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box>
-            <img className="logoImage" src={Logo} alt="Logo" />
-          </Box>
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               //   size="large"
@@ -84,14 +80,6 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h6"
-            // noWrap
-            component="div"
-            // sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-          >
-            LOGO
-          </Typography>
           <Box
             sx={{
               flexGrow: 1,
@@ -179,7 +167,7 @@ const ResponsiveAppBar = () => {
                 onClick={handleOpenUserMenu}
                 //   sx={{ p: 0 }}
               >
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <img className="logoImage" src={Logo} alt="Logo" />
               </IconButton>
             </Tooltip>
             <Menu
