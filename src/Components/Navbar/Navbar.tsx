@@ -11,6 +11,7 @@ import Container from "@material-ui/core/Container";
 import Tooltip from "@material-ui/core/Tooltip";
 import MenuItem from "@material-ui/core/MenuItem";
 import Logo from "../../Images/logo_face.png";
+import BookNow from "../../Images/booknow.png";
 import "./navbar.css";
 
 const pages = ["Wedding", "About", "Contact"];
@@ -23,8 +24,8 @@ const ResponsiveAppBar = () => {
   const handleOpenNavMenu = (event: any) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event: any) => {
-    setAnchorElUser(event.currentTarget);
+  const handleBookNow = () => {
+    alert("Book with BJMS! Coming soon!");
   };
 
   const handleCloseNavMenu = () => {
@@ -40,7 +41,7 @@ const ResponsiveAppBar = () => {
       position="static"
       style={{
         width: "100vw",
-        height: "10vh",
+
         overflow: "hidden",
         backgroundColor: "#333",
         position: "fixed" /* Set the navbar to fixed position */,
@@ -93,7 +94,7 @@ const ResponsiveAppBar = () => {
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
-              justifyContent: "space-between",
+              justifyContent: "space-around",
             }}
           >
             <Link
@@ -173,10 +174,10 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton
-                onClick={handleOpenUserMenu}
+                onClick={handleBookNow}
                 //   sx={{ p: 0 }}
               >
-                <img className="logoImage" src={Logo} alt="Logo" />
+                <img className="logoImage" src={BookNow} alt="Logo" />
               </IconButton>
             </Tooltip>
             <Menu
@@ -212,131 +213,3 @@ const ResponsiveAppBar = () => {
   );
 };
 export default ResponsiveAppBar;
-
-// // import { Link } from "react-router-dom";
-// import { useEffect } from "react";
-// import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-// // import jQuery from "jquery";
-// import Logo from "../../Images/logo_face.png";
-// // import "../Navbar/navbar.css";
-// import "bootstrap/dist/css/bootstrap.css";
-// import "./navbar.css";
-// import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-
-// const useStyles = makeStyles((theme: Theme) =>
-//   createStyles({
-//     topHeader: {
-//       background: "#fff",
-//       display: "flex",
-//       flexDirection: "row",
-//       top: 0,
-//       left: 0,
-//       width: "100%",
-//       margin: "0 auto",
-//       zIndex: 20,
-//     },
-//     navbar: {
-//       padding: 0,
-//     },
-//     logo: {
-//       transform: "translateX(25%)",
-//     },
-//   })
-// );
-
-// export default function Navbar() {
-//   const classes = useStyles();
-//   //   useEffect(() => {
-//   //     jQuery(window).on("scroll", function () {
-//   //       if (jQuery(window).scrollTop() > 50) {
-//   //         jQuery(".top-header").addClass("fixed-menu");
-//   //       } else {
-//   //         jQuery(".top-header").removeClass("fixed-menu");
-//   //       }
-//   //     });
-//   //   });
-
-//   return (
-//     <>
-//       <header className="top-header">
-//         <nav className="navbar header-nav navbar-expand-lg">
-//           <a className={classes.logo} href="#home">
-//             <img id="logo" src={Logo} alt="Logo" />
-//           </a>
-//           <div className="container">
-//             <button
-//               className="navbar-toggler"
-//               type="button"
-//               data-toggle="collapse"
-//               data-target="#navbar-wd"
-//               aria-controls="navbar-wd"
-//               aria-expanded="false"
-//               aria-label="Toggle navigation"
-//             >
-//               <span></span>
-//               <span></span>
-//               <span></span>
-//             </button>
-//             <div
-//               className="collapse navbar-collapse justify-content-end"
-//               id="navbar-wd"
-//             >
-//               <ul className="navbar-nav">
-//                 <li>
-//                   <a className="nav-link nav" href="#home">
-//                     Home
-//                   </a>
-//                 </li>
-//                 <li>
-//                   <a className="nav-link" href="#about">
-//                     About Us
-//                   </a>
-//                 </li>
-//                 <li>
-//                   <a className="nav-link" href="#timeline">
-//                     Our Story
-//                   </a>
-//                 </li>
-//                 <li>
-//                   <a className="nav-link" href="#party">
-//                     Party
-//                   </a>
-//                 </li>
-//                 <li>
-//                   <a className="nav-link" href="#wedding">
-//                     Wedding
-//                   </a>
-//                 </li>
-//                 <li>
-//                   <a className="nav-link" href="#travel">
-//                     Travel
-//                   </a>
-//                 </li>
-//                 {/* <li>
-//                   <a className="nav-link" href="#registry">
-//                     Registry
-//                   </a>
-//                 </li> */}
-//                 <li>
-//                   <a className="nav-link" href="#faq">
-//                     FAQ
-//                   </a>
-//                 </li>
-//                 <li>
-//                   <a className="nav-link" href="#contact">
-//                     Contact
-//                   </a>
-//                 </li>
-//                 {/* <li>
-//                   <Link className="nav-link" to="/rsvp">
-//                     RSVP
-//                   </Link>
-//                 </li> */}
-//               </ul>
-//             </div>
-//           </div>
-//         </nav>
-//       </header>
-//     </>
-//   );
-// }
