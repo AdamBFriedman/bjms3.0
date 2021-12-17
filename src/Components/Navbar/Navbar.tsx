@@ -8,7 +8,6 @@ import Menu from "@material-ui/core/Menu";
 import Link from "@material-ui/core/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@material-ui/core/Container";
-import Avatar from "@material-ui/core/Avatar";
 import Tooltip from "@material-ui/core/Tooltip";
 import MenuItem from "@material-ui/core/MenuItem";
 import Logo from "../../Images/logo_face.png";
@@ -37,7 +36,17 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      style={{
+        width: "100vw",
+        height: "10vh",
+        overflow: "hidden",
+        backgroundColor: "#333",
+        position: "fixed" /* Set the navbar to fixed position */,
+        top: 0 /* Position the navbar at the top of the page */,
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
