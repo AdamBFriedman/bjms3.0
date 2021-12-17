@@ -1,16 +1,17 @@
 import { useState } from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Box from "@material-ui/core/Box";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import Menu from "@material-ui/core/Menu";
-import Link from "@material-ui/core/Link";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Menu,
+  Link,
+  Container,
+  Tooltip,
+  MenuItem,
+} from "@material-ui/core";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@material-ui/core/Container";
-import Tooltip from "@material-ui/core/Tooltip";
-import MenuItem from "@material-ui/core/MenuItem";
-import Logo from "../../Images/logo_face.png";
 import BookNow from "../../Images/booknow.png";
 import "./navbar.css";
 
