@@ -5,5 +5,8 @@ const bjmsTheme = createTheme({
     secondary: { main: "#2FCB00", light: "#f8ee03" },
     grey: { main: "#bdc3c7" },
   },
+  typography: {
+    fontFamily: "'Dosis', sans-serif",
+  },
 });
 export default bjmsTheme;
