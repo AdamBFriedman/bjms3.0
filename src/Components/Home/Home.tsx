@@ -1,5 +1,6 @@
 import { Box, Typography } from "@material-ui/core";
 import Navbar from "../Navbar/Navbar";
+import { SwingingFrame } from "../SwingingFrame/SwingingFrame";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Typography variant="h1" component="h1">
           Home
         </Typography>
+        <SwingingFrame />
       </Box>
       <Box
         id="story"
