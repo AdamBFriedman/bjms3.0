@@ -60,18 +60,7 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar
-      position="static"
-      // style={{
-      //   width: "100vw",
-
-      //   overflow: "hidden",
-      //   backgroundColor: "#333",
-      // position: "fixed" /* Set the navbar to fixed position */,
-      // top: 0 /* Position the navbar at the top of the page */,
-      // }}
-      className={classes.appbar}
-    >
+    <AppBar position="static" className={classes.appbar}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -105,16 +94,15 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  {/* <Typography
-                  //   textAlign="center"
-                  >
-                    {page}
-                  </Typography> */}
                   <Link
                     className="nav-link"
                     href={
                       page === "Private Parties"
                         ? "#private"
+                        : page === "Virtual Magic"
+                        ? "#virtual"
+                        : page === "Schools/Camps"
+                        ? "#school"
                         : `#${page.toLowerCase()}`
                     }
                   >
@@ -131,78 +119,24 @@ const ResponsiveAppBar = () => {
               justifyContent: "space-around",
             }}
           >
-            <Link
-              // onClick={handleCloseNavMenu}
-              className="nav-link nav active"
-              href={"#home"}
-            >
-              Home
-            </Link>
-
-            <Link
-              // onClick={handleCloseNavMenu}
-              className="nav-link nav"
-              href={"#story"}
-            >
-              Story
-            </Link>
-
-            <Link
-              // onClick={handleCloseNavMenu}
-              className="nav-link nav"
-              href={"#private"}
-            >
-              Private Parties
-            </Link>
-
-            <Link
-              // onClick={handleCloseNavMenu}
-              className="nav-link nav"
-              href={"#school"}
-            >
-              Schools/Camps
-            </Link>
-
-            <Link
-              // onClick={handleCloseNavMenu}
-              className="nav-link nav"
-              href={"#corporate"}
-            >
-              Corporate
-            </Link>
-
-            <Link
-              // onClick={handleCloseNavMenu}
-              className="nav-link nav"
-              href={"#virtual"}
-            >
-              Virtual Magic
-            </Link>
-
-            <Link
-              // onClick={handleCloseNavMenu}
-              className="nav-link nav"
-              href={"#faq"}
-            >
-              FAQ
-            </Link>
-            {/* {pages.map((page) => (
+            {pages.map((page) => (
               <Link
                 key={page}
-                // onClick={handleCloseNavMenu}
                 className="nav-link nav"
-                href={"#contact"}
+                style={{ fontSize: 24 }}
+                href={
+                  page === "Private Parties"
+                    ? "#private"
+                    : page === "Virtual Magic"
+                    ? "#virtual"
+                    : page === "Schools/Camps"
+                    ? "#school"
+                    : `#${page.toLowerCase()}`
+                }
               >
                 {page}
               </Link>
-              //   <Button
-              //     key={page}
-              //     onClick={handleCloseNavMenu}
-              //     // sx={{ my: 2, color: 'white', display: 'block' }}
-              //   >
-              //     {page}
-              //   </Button>
-            ))} */}
+            ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
