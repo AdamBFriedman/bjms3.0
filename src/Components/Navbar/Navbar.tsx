@@ -137,6 +137,17 @@ const ResponsiveAppBar = () => {
               </Link>
             ))}
           </Box>
+
+          <Box sx={{ flexGrow: 0 }}>
+            <Tooltip title="Open settings">
+              <IconButton
+                onClick={handleBookNow}
+                //   sx={{ p: 0 }}
+              >
+                <img className="logoImage" src={BookNow} alt="Logo" />
+              </IconButton>
+            </Tooltip>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
