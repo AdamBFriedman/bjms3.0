@@ -15,7 +15,15 @@ import MenuIcon from "@mui/icons-material/Menu";
 import BookNow from "../../Images/booknow.png";
 import "./navbar.css";
 
-const pages = ["Wedding", "About", "Contact"];
+const pages = [
+  "Home",
+  "Story",
+  "Private Parties",
+  "Schools/Camps",
+  "Corporate",
+  "Virtual Magic",
+  "FAQ",
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = () => {
@@ -82,11 +90,21 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography
+                  {/* <Typography
                   //   textAlign="center"
                   >
                     {page}
-                  </Typography>
+                  </Typography> */}
+                  <Link
+                    className="nav-link"
+                    href={
+                      page === "Private Parties"
+                        ? "#private"
+                        : `#${page.toLowerCase()}`
+                    }
+                  >
+                    {page}
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
