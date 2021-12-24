@@ -19,6 +19,8 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   appbar: {
     backgroundColor: theme.palette.primary.main,
+    borderTop: `10px solid ${theme.palette.secondary.main}`,
+    borderBottom: `10px solid ${theme.palette.secondary.main}`,
     width: "100vw",
     overflow: "hidden",
     position: "fixed",
