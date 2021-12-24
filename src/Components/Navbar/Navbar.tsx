@@ -4,7 +4,6 @@ import {
   Box,
   Toolbar,
   IconButton,
-  Typography,
   Menu,
   Link,
   Container,
@@ -41,7 +40,6 @@ const pages = [
 const ResponsiveAppBar = () => {
   const classes = useStyles();
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event: any) => {
     setAnchorElNav(event.currentTarget);
@@ -52,10 +50,6 @@ const ResponsiveAppBar = () => {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
