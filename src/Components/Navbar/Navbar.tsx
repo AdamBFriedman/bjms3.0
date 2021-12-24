@@ -14,6 +14,17 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import BookNow from "../../Images/booknow.png";
 import "./navbar.css";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  appbar: {
+    backgroundColor: theme.palette.primary.main,
+    width: "100vw",
+    overflow: "hidden",
+    position: "fixed",
+    top: 0,
+  },
+}));
 
 const pages = [
   "Home",
@@ -27,6 +38,7 @@ const pages = [
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = () => {
+  const classes = useStyles();
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
 
@@ -48,14 +60,15 @@ const ResponsiveAppBar = () => {
   return (
     <AppBar
       position="static"
-      style={{
-        width: "100vw",
+      // style={{
+      //   width: "100vw",
 
-        overflow: "hidden",
-        backgroundColor: "#333",
-        position: "fixed" /* Set the navbar to fixed position */,
-        top: 0 /* Position the navbar at the top of the page */,
-      }}
+      //   overflow: "hidden",
+      //   backgroundColor: "#333",
+      // position: "fixed" /* Set the navbar to fixed position */,
+      // top: 0 /* Position the navbar at the top of the page */,
+      // }}
+      className={classes.appbar}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
