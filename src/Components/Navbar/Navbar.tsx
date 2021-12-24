@@ -25,6 +25,10 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     top: 0,
   },
+  navLink: {
+    color: "#fff",
+    fontSize: theme.spacing(3),
+  },
 }));
 
 const pages = [
@@ -115,8 +119,7 @@ const ResponsiveAppBar = () => {
             {pages.map((page) => (
               <Link
                 key={page}
-                className="nav-link nav"
-                style={{ fontSize: 24 }}
+                className={classes.navLink}
                 href={
                   page === "Private Parties"
                     ? "#private"
