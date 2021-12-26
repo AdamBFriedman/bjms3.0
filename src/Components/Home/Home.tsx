@@ -1,9 +1,11 @@
 import { Box, Typography } from "@material-ui/core";
 import Navbar from "../Navbar/Navbar";
-import { SwingingFrame } from "../SwingingFrame/SwingingFrame";
+// import { SwingingFrame } from "../SwingingFrame/SwingingFrame";
 import HomeCenterContent from "../HomeCenterContent/HomeCenterContent";
+// import SocialMedia from "../SocialMedia/SocialMedia";
 import { makeStyles } from "@material-ui/core/styles";
 import suit from "../../Images/suit.jpg";
+// import { useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   "@keyframes jump": {
@@ -37,11 +39,11 @@ const useStyles = makeStyles((theme) => ({
   },
   homeWrapper: {
     fontFamily: "sans-serif",
-    textAlign: "center",
+    // textAlign: "center",
     backgroundImage: `url(${suit})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    height: "100vh",
+    // height: "100vh",
     [theme.breakpoints.down("sm")]: {
       backgroundPosition: "center",
     },
@@ -54,6 +56,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home() {
   const classes = useStyles();
+  // const theme = useTheme();
+  // const isDesktopOrLarger = useMediaQuery(theme.breakpoints.up("lg"));
+  // const isMobileOrSmaller = useMediaQuery(theme.breakpoints.down("xs"));
   return (
     <>
       <Navbar />
@@ -64,11 +69,9 @@ export default function Home() {
         paddingTop="10vh"
         className={classes.homeWrapper}
       >
-        <Typography variant="h1" component="h1">
-          Home
-        </Typography>
-        <SwingingFrame />
+        {/* <SwingingFrame /> */}
         <HomeCenterContent />
+        {/* {isMobileOrSmaller ? null : <SocialMedia />} */}
       </Box>
       <Box
         id="story"

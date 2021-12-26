@@ -1,9 +1,10 @@
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Box from "@material-ui/core/Box";
-import SwingingFrame from "../SwingingFrame/SwingingFrame";
+// import SwingingFrame from "../SwingingFrame/SwingingFrame";
 import TitleBJMS from "./Title";
 import SubtitleFES from "./Subtitle";
+import SocialMedia from "../SocialMedia/SocialMedia";
 
 const useStyles = makeStyles((theme) => ({
   centerContent: {
@@ -11,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "end",
     alignItems: "center",
-    height: "60vh",
+    height: "80vh",
     // width: "80%",
     // margin: theme.spacing(0, "auto"),
     alignContent: "center",
@@ -28,12 +29,14 @@ const useStyles = makeStyles((theme) => ({
 export const Title = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const isDesktopOrLarger = useMediaQuery(theme.breakpoints.up("lg"));
+  //   const isDesktopOrLarger = useMediaQuery(theme.breakpoints.up("lg"));
+  const isMobileOrSmaller = useMediaQuery(theme.breakpoints.down("xs"));
 
   return (
     <Box className={classes.centerContent}>
       <TitleBJMS />
       <SubtitleFES />
+      {isMobileOrSmaller ? null : <SocialMedia />}
       {/* {isDesktopOrLarger ? null : <SwingingFrame />} */}
     </Box>
   );
