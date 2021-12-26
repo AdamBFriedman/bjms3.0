@@ -52,6 +52,24 @@ const useStyles = makeStyles((theme) => ({
       overflowY: "scroll",
     },
   },
+  storyWrapper: {
+    background: "blue",
+  },
+  privatePartiesWrapper: {
+    background: "green",
+  },
+  schoolsCampsWrapper: {
+    background: "yellow",
+  },
+  corporateWrapper: {
+    background: "purple",
+  },
+  virtualMagicWrapper: {
+    background: "orange",
+  },
+  faqWrapper: {
+    background: "red",
+  },
 }));
 
 export default function Home() {
@@ -78,7 +96,7 @@ export default function Home() {
         width="100vw"
         height="100vh"
         paddingTop="10vh"
-        border="1px solid blue"
+        className={classes.storyWrapper}
       >
         <Typography variant="h1" component="h1">
           Story
@@ -89,7 +107,7 @@ export default function Home() {
         width="100vw"
         height="100vh"
         paddingTop="10vh"
-        border="1px solid green"
+        className={classes.privatePartiesWrapper}
       >
         <Typography variant="h1" component="h1">
           Private Parties
@@ -100,7 +118,7 @@ export default function Home() {
         width="100vw"
         height="100vh"
         paddingTop="10vh"
-        border="1px solid yellow"
+        className={classes.schoolsCampsWrapper}
       >
         <Typography variant="h1" component="h1">
           Schools/Camps
@@ -111,7 +129,7 @@ export default function Home() {
         width="100vw"
         height="100vh"
         paddingTop="10vh"
-        border="1px solid purple"
+        className={classes.corporateWrapper}
       >
         <Typography variant="h1" component="h1">
           Corporate
@@ -122,7 +140,7 @@ export default function Home() {
         width="100vw"
         height="100vh"
         paddingTop="10vh"
-        border="1px solid orange"
+        className={classes.virtualMagicWrapper}
       >
         <Typography variant="h1" component="h1">
           Virtual Magic
@@ -133,7 +151,7 @@ export default function Home() {
         width="100vw"
         height="100vh"
         paddingTop="10vh"
-        border="1px solid red"
+        className={classes.faqWrapper}
       >
         <Typography variant="h1" component="h1">
           FAQ
