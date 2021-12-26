@@ -21,10 +21,10 @@ const useStyles = makeStyles((theme) => ({
   },
   animated_H1: {
     fontFamily: "'PT Serif', sans-serif",
-    fontSize: "3em",
+    fontSize: "6em",
     textShadow: "0 5px 15px rgba(0,0,0,.3)",
     textTransform: "uppercase",
-    lineHeight: "3.5",
+    // lineHeight: "3.5",
     letterSpacing: theme.spacing(2),
     [theme.breakpoints.up("xl")]: {
       fontSize: "6em",

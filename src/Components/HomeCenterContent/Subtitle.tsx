@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   animated_H2: {
     fontFamily: "'Playfair Display', sans-serif",
-    fontSize: "1.6rem",
+    fontSize: "4em",
     textTransform: "uppercase",
     letterSpacing: 1,
     background: theme.palette.primary.main,

@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "end",
     alignItems: "center",
-    height: "80vh",
+    height: "90vh",
     // width: "80%",
     // margin: theme.spacing(0, "auto"),
     alignContent: "center",
