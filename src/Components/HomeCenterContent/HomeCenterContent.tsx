@@ -9,18 +9,20 @@ const useStyles = makeStyles((theme) => ({
   centerContent: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "end",
     alignItems: "center",
-    width: "80%",
-    margin: theme.spacing(0, "auto"),
-    transform: "translateY(-150%)",
-    [theme.breakpoints.up("xl")]: {
-      transform: "translateY(-120%)",
-    },
-    [theme.breakpoints.down("xs")]: {
-      width: "100vw",
-      transform: "translateY(50%)",
-    },
+    height: "60vh",
+    // width: "80%",
+    // margin: theme.spacing(0, "auto"),
+    alignContent: "center",
+    // transform: "translateY(-150%)",
+    // [theme.breakpoints.up("xl")]: {
+    //   transform: "translateY(-120%)",
+    // },
+    // [theme.breakpoints.down("xs")]: {
+    //   width: "100vw",
+    //   transform: "translateY(50%)",
+    // },
   },
 }));
 export const Title = () => {
@@ -32,7 +34,7 @@ export const Title = () => {
     <Box className={classes.centerContent}>
       <TitleBJMS />
       <SubtitleFES />
-      {isDesktopOrLarger ? null : <SwingingFrame />}
+      {/* {isDesktopOrLarger ? null : <SwingingFrame />} */}
     </Box>
   );
 };

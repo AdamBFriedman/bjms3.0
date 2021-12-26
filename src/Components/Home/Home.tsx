@@ -62,7 +62,6 @@ export default function Home() {
         width="100vw"
         height="100vh"
         paddingTop="10vh"
-        border="1px solid red"
         className={classes.homeWrapper}
       >
         <Typography variant="h1" component="h1">
