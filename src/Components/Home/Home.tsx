@@ -150,8 +150,8 @@ export default function Home() {
       <Box
         id="faq"
         width="100vw"
-        height="100vh"
-        paddingTop="10vh"
+        // height="100vh"
+        padding="3em"
         className={classes.faqWrapper}
       >
         <FAQ />

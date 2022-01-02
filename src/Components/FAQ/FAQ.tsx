@@ -10,7 +10,7 @@ const styles = {
   rowTitleColor: primaryMain,
   rowContentColor: secondaryMain,
   arrowColor: primaryMain,
-  rowContentPaddingLeft: "1em",
+  // rowContentPaddingLeft: "1em",
 };
 
 const getRandomNumber = () => {
@@ -51,7 +51,7 @@ const faqConfig = {
 
 export const FAQ = () => {
   return (
-    <Box padding={2}>
+    <Box>
       <Faq styles={styles} data={faqData} config={faqConfig} />
     </Box>
   );
