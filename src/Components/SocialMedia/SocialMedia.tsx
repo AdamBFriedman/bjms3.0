@@ -116,17 +116,6 @@ const chooseSocialMediaCSS = (name: string) => {
 };
 
 const chooseSocialMedia = (name: string, className: string) => {
-  //   if (variant === "css") {
-  //     return name === "facebook"
-  //       ? "#4267b2"
-  //       : name === "youtube"
-  //       ? "#ED3833"
-  //       : name === "linkedin"
-  //       ? "#0077b5"
-  //       : name === "instagram"
-  //       ? "radial-gradient(circle at 30% 100%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)"
-  //       : "radial-gradient(circle at 30% 100%, #00f2ea, #ff0050)";
-  //   } else {
   return name === "facebook" ? (
     <FaFacebook className={className} />
   ) : name === "youtube" ? (
@@ -138,7 +127,6 @@ const chooseSocialMedia = (name: string, className: string) => {
   ) : (
     <FontAwesomeIcon className={className} icon={faTiktok} />
   );
-  //   }
 };
 
 export const SocialMedia = () => {
