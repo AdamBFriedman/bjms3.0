@@ -7,6 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import suit from "../../Images/suit.jpg";
 // import { useMediaQuery } from "@material-ui/core";
 import FAQ from "../FAQ/FAQ";
+import Footer from "../Footer/Footer";
 
 const useStyles = makeStyles((theme) => ({
   "@keyframes jump": {
@@ -70,6 +71,9 @@ const useStyles = makeStyles((theme) => ({
   },
   faqWrapper: {
     background: "white",
+  },
+  footerWrapper: {
+    background: theme.palette.primary.main,
   },
 }));
 
@@ -155,6 +159,15 @@ export default function Home() {
         className={classes.faqWrapper}
       >
         <FAQ />
+      </Box>
+      <Box
+        id="faq"
+        width="100vw"
+        // height="100vh"
+        padding="3em"
+        className={classes.footerWrapper}
+      >
+        <Footer />
       </Box>
     </>
   );
