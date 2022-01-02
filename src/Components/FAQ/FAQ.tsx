@@ -1,12 +1,20 @@
+import Box from "@material-ui/core/Box";
 import Faq from "react-faq-component";
+
+const primaryMain = "#820CCB";
+const secondaryMain = "#2FCB00";
 
 const styles = {
   bgColor: "white",
-  titleTextColor: "#820CCB",
-  rowTitleColor: "#820CCB",
-  rowContentColor: "#2FCB00",
-  arrowColor: "#820CCB",
+  titleTextColor: primaryMain,
+  rowTitleColor: primaryMain,
+  rowContentColor: secondaryMain,
+  arrowColor: primaryMain,
   rowContentPaddingLeft: "1em",
+};
+
+const getRandomNumber = () => {
+  return Math.floor(Math.random() * 11);
 };
 
 const faqData = {
@@ -28,6 +36,10 @@ const faqData = {
       title: "Would you like to touch my balls?",
       content: `Yes.`,
     },
+    {
+      title: "I'm thinking of a number between 1 and 10...",
+      content: getRandomNumber(),
+    },
   ],
 };
 
@@ -39,9 +51,9 @@ const faqConfig = {
 
 export const FAQ = () => {
   return (
-    <div>
+    <Box padding={2}>
       <Faq styles={styles} data={faqData} config={faqConfig} />
-    </div>
+    </Box>
   );
 };
 
