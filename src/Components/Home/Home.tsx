@@ -6,6 +6,7 @@ import HomeCenterContent from "../HomeCenterContent/HomeCenterContent";
 import { makeStyles } from "@material-ui/core/styles";
 import suit from "../../Images/suit.jpg";
 // import { useMediaQuery } from "@material-ui/core";
+import FAQ from "../FAQ/FAQ";
 
 const useStyles = makeStyles((theme) => ({
   "@keyframes jump": {
@@ -68,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
     background: "orange",
   },
   faqWrapper: {
-    background: "red",
+    background: "white",
   },
 }));
 
@@ -153,9 +154,7 @@ export default function Home() {
         paddingTop="10vh"
         className={classes.faqWrapper}
       >
-        <Typography variant="h1" component="h1">
-          FAQ
-        </Typography>
+        <FAQ />
       </Box>
     </>
   );
