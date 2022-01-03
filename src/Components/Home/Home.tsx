@@ -1,9 +1,11 @@
-import { Box, Typography } from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
+import { makeStyles } from "@material-ui/core/styles";
 import Navbar from "../Navbar/Navbar";
 // import { SwingingFrame } from "../SwingingFrame/SwingingFrame";
 import HomeCenterContent from "../HomeCenterContent/HomeCenterContent";
+import Story from "../Story/Story";
 // import SocialMedia from "../SocialMedia/SocialMedia";
-import { makeStyles } from "@material-ui/core/styles";
 import suit from "../../Images/suit.jpg";
 // import { useMediaQuery } from "@material-ui/core";
 import FAQ from "../FAQ/FAQ";
@@ -96,16 +98,8 @@ export default function Home() {
         <HomeCenterContent />
         {/* {isMobileOrSmaller ? null : <SocialMedia />} */}
       </Box>
-      <Box
-        id="story"
-        width="100vw"
-        height="100vh"
-        paddingTop="10vh"
-        className={classes.storyWrapper}
-      >
-        <Typography variant="h1" component="h1">
-          Story
-        </Typography>
+      <Box id="story" width="100vw" className={classes.storyWrapper}>
+        <Story />
       </Box>
       <Box
         id="private"
