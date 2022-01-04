@@ -36,7 +36,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   list: {
-    // height: "100%",
     width: "100vw",
     display: "flex",
     flexDirection: "row",
@@ -45,13 +44,9 @@ const useStyles = makeStyles((theme) => ({
     listStyleType: "none",
     margin: theme.spacing(0, 3),
     padding: 0,
-    // [theme.breakpoints.down("xs")]: {
-    //   transform: "translateY(0)",
-    //   alignItems: "center",
-    //   height: "auto",
-    // },
   },
   listItem: {
+    cursor: "pointer",
     width: "60px",
     height: "60px",
     textAlign: "center",
@@ -62,22 +57,15 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     margin: theme.spacing(3, 0),
     animation: "$jello 0.9s both",
+
     "&:hover": {
-      transform: "translateX(20px)",
-      transition: ".3s",
+      transform: "scale(1.25) !important",
     },
     [theme.breakpoints.up("xl")]: {
       width: "100px",
       height: "100px",
       lineHeight: "100px",
       fontSize: "60px",
-    },
-    [theme.breakpoints.down("xs")]: {
-      margin: theme.spacing(2, 0),
-      "&:hover": {
-        transform: "translateX(0)",
-        transition: "0s",
-      },
     },
   },
   icon: {
