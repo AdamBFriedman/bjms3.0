@@ -5,6 +5,36 @@ import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
+  "@keyframes jello": {
+    "0%": {
+      WebkitTransform: "scale3d(1, 1, 1)",
+      transform: "scale3d(1, 1, 1)",
+    },
+    "30%": {
+      WebkitTransform: "scale3d(1.25, 0.75, 1)",
+      transform: "scale3d(1.25, 0.75, 1)",
+    },
+    "40%": {
+      WebkitTransform: "scale3d(0.75, 1.25, 1)",
+      transform: "scale3d(0.75, 1.25, 1)",
+    },
+    "50%": {
+      WebkitTransform: "scale3d(1.15, 0.85, 1)",
+      transform: "scale3d(1.15, 0.85, 1)",
+    },
+    "65%": {
+      WebkitTransform: "scale3d(0.95, 1.05, 1)",
+      transform: "scale3d(0.95, 1.05, 1)",
+    },
+    "75%": {
+      WebkitTransform: "scale3d(1.05, 0.95, 1)",
+      transform: "scale3d(1.05, 0.95, 1)",
+    },
+    "100%": {
+      WebkitTransform: "scale3d(1, 1, 1)",
+      transform: "scale3d(1, 1, 1)",
+    },
+  },
   list: {
     // height: "100%",
     width: "100vw",
@@ -31,6 +61,7 @@ const useStyles = makeStyles((theme) => ({
     background: "black",
     position: "relative",
     margin: theme.spacing(3, 0),
+    animation: "$jello 0.9s both",
     "&:hover": {
       transform: "translateX(20px)",
       transition: ".3s",
